@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#376287"
+    android:orientation="vertical"
+    android:weightSum="10.0">
+
+    <!--
+    <View
+        android:id="@+id/view2"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_status_bar"
+        android:background="@color/colorWhite" /> -->
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_settings_appBar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginTop="@dimen/height_status_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/all_backarrow_black">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/text_settings"
+            android:textColor="#B6C3CA"
+            android:textSize="23.0sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/textView_settings_selectLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:text="@string/text_select_language"
+        android:textColor="#B6C3CA"
+        android:textSize="15.0sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guideline_settings_vericalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_settings_appBar" />
+
+    <View
+        android:id="@+id/view_settings_languageDivider"
+        style="@style/Divider"
+        android:layout_marginTop="8.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_settings_selectLanguage" />
+
+    <TextView
+        android:id="@+id/textView_settings_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:text="@string/text_more"
+        android:textColor="@color/colorBlack"
+        android:textSize="15.0sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/guideline_settings_vericalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/view_settings_languageDivider" />
+
+    <TextView
+        android:id="@+id/textView_settings_privacyPolicy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:textSize="15.0sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/guideline_settings_vericalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/textView_settings_more" />
+
+    <View
+        android:id="@+id/view_settings_privacyPolicyDivider"
+        style="@style/Divider"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="8.0dip"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_settings_privacyPolicy" />
+
+    <TextView
+        android:id="@+id/textView_settings_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:text="@string/text_about_small"
+        android:textSize="15.0sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/guideline_settings_vericalGuideline"
+        app:layout_constraintTop_toBottomOf="@id/view_settings_privacyPolicyDivider" />
+
+    <View
+        android:id="@+id/view_settings_aboutDivider"
+        style="@style/Divider"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="8.0dip"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/textView_settings_about"
+        app:layout_constraintTop_toBottomOf="@id/textView_settings_about" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_settings_vericalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20.0dip" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_settings_selectLanguageClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20.0dip"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/textView_settings_selectLanguage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView_settings_selectLanguage">
+
+
+        <ImageView
+            android:id="@+id/imageView_settings_dropdownIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2.0dip"
+            android:layout_marginTop="4.0dip"
+            android:background="@drawable/settings_spinner_dropdown_icon"
+            app:layout_constraintBottom_toBottomOf="@id/textView_settings_languageName"
+            app:layout_constraintStart_toEndOf="@id/textView_settings_languageName"
+            app:layout_constraintTop_toTopOf="@id/textView_settings_languageName" />
+
+
+        <TextView
+            android:id="@+id/textView_settings_languageName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:text="@string/default_language_name"
+            android:textColor="#B6C3CA"
+            android:textSize="15.0sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

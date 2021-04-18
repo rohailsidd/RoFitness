@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/start_workout_bg">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_startActivity_appBar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginTop="@dimen/height_status_bar"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+        app:contentInsetStart="0.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/all_backarrow_white"
+        app:titleTextColor="#B6C3CA" />
+
+    <TextView
+        android:id="@+id/textView_startWorkout_workoutTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:textAlignment="center"
+        android:textColor="#B6C3CA"
+        android:textSize="20.0sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_startActivity_appBar" />
+
+    <TextView
+        android:id="@+id/textView_startWorkout_workoutRepetitions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:textColor="#B6C3CA"
+        android:textSize="20.0sp"
+        app:layout_constraintBottom_toTopOf="@id/imageButton_startActivity_start"
+        app:layout_constraintEnd_toEndOf="@id/textView_startWorkout_workoutTitle"
+        app:layout_constraintStart_toStartOf="@id/textView_startWorkout_workoutTitle"
+        app:layout_constraintTop_toBottomOf="@id/textView_startWorkout_workoutTitle" />
+
+    <ImageButton
+        android:id="@+id/imageButton_startActivity_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/start_workout_start_icon"
+        android:contentDescription="@string/content_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_startActivity_appBar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32.0dip"
+        android:gravity="center"
+        android:text="@string/text_lets_start_workout"
+        android:textColor="#B6C3CA"
+        android:textSize="20.0sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageButton_startActivity_start" />
+</androidx.constraintlayout.widget.ConstraintLayout>

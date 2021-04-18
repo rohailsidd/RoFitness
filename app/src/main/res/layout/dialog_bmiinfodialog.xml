@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayout_bmiInfoDialogue_customLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#4F81A6">
+
+    <TextView
+        android:id="@+id/textView_bmiInfoDialogue_title"
+        android:layout_width="wrap_content"
+        android:layout_height="39.0dip"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginTop="32.0dip"
+        android:layout_marginEnd="8.0dip"
+        android:text="@string/bmiInfoDialogue_title"
+        android:textColor="#A2BACF"
+        android:textSize="@dimen/textSize_all_customDialogueHeader"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_bmiInfoDialogue_desription"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24.0dip"
+        android:layout_marginTop="24.0dip"
+        android:layout_marginEnd="24.0dip"
+        android:text="@string/bmiInfoDialogue_body"
+        android:textAlignment="center"
+        android:textColor="#CADDED"
+        android:textSize="@dimen/textSize_all_customDialogueDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_bmiInfoDialogue_title" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="350.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10.0dip"
+        android:layout_marginTop="24.0dip"
+        android:layout_marginEnd="10.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_bmiInfoDialogue_desription">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:stretchColumns="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:width="175.0dip"
+                    android:background="@drawable/customdialogue_cellboundry"
+                    android:padding="2.0dip"
+                    android:text="@string/bmiInfoDialogue_bmi"
+                    android:textAlignment="center"
+                    android:textColor="#CADDED"
+                    android:textSize="@dimen/textSize_view_bmiInfoTableText" />
+
+                <TextView
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/customdialogue_cellboundry"
+                    android:padding=".0dip"
+                    android:text="@string/bmiInfoDialogue_weightStatus"
+                    android:textAlignment="center"
+                    android:textColor="#CADDED"
+                    android:textSize="@dimen/textSize_view_bmiInfoTableText" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:width="150.0dip"
+                    android:background="@drawable/customdialogue_cellboundry"
+                    android:padding="2.0dip"
+                    android:text="@string/bmiInfoDialogue_veryseverelyunderWeightValue"
+                    android:textAlignment="center"
+                    android:textColor="#7FAED1"
+                    android:textSize="@dimen/textSize_view_bmiInfoTableText" />
+
+                <TextView
+                    android:background="@drawable/customdialogue_cellboundry"
+                    android:padding="2.0dip"
+                    android:text="@string/bmiCalculator_status_very_severely_underWeight"
+                    android:textAlignment="center"
+                    android:textColor="#7FAED1"
+                    android:textSize="@dimen/textSize_view_bmiInfoTableText" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:width="150.0dip"
+                    android:background="@drawable/customdialogue_cellboundry"
+                    android:padding="2.0dip"
+                    android:text="@string/bmiInfoDialogue_severelyunderWeightValue"
+                    android:textAlignment="center"
+                    android:textColor="#7FAED1"
+                    android:textSize="@dimen/textSize_view_bmiInfoTableText" />
+
+                <TextView
+                    android:background="@drawable/customdialogue_cellboundry"
+                    android:padding="2.0dip"
+                    android:text="@string/bmiCalculator_status_severely_underWeight"
+                    android:textAlignment="center"
+                    android:textColor="#7FAED1"
+                    android:textSize="@dimen/textSize_view_bmiInfoTableText" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:width="150.0dip"
+                    android:background="@drawable/customdialogue_cellboundry"
+                    android:padding="2.0dip"
+                    android:text="@string/bmiInfoDialogue_underWeightValue"
+                    android:textAlignment="center"
+                    android:textColor="#7FAED1"
+                    android:textSize="@dimen/textSize_view_bmiInfoTableText" />
+
+                <TextView
+                    android:background="@drawable/customdialogue_cellboundry"
+                    android:padding="2.0dip"
+                    android:text="@string/bmiCalculator_status_underWeight"
+                    android:textAlignment="center"
+                    android:textColor="#7FAED1"
+                    android:textSize="@dimen/textSize_view_bmiInfoTableText" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:width="150.0dip"
+                    android:background="@drawable/customdialogue_cellboundry"
+                    android:padding="2.0dip"
+                    android:text="@string/bmiInfoDialogue_normalValue"
+                    android:textAlignment="center"
+                    android:textColor="#7FAED1"
+                    android:textSize="@dimen/textSize_view_bmiInfoTableText" />
+
+                <TextView
+                    android:background="@drawable/customdialogue_cellboundry"
+                    android:padding="2.0dip"
+                    android:text="@string/bmiCalculator_status_normal"
+                    android:textAlignment="center"
+                    android:textColor="#7FAED1"
+                    android:textSize="@dimen/textSize_view_bmiInfoTableText" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:width="150.0dip"
+                    android:background="@drawable/customdialogue_cellboundry"
+                    android:padding="2.0dip"
+                    android:text="@string/bmiInfoDialogue_overWeightValue"
+                    android:textAlignment="center"
+                    android:textColor="#7FAED1"
+                    android:textSize="@dimen/textSize_view_bmiInfoTableText" />
+
+                <TextView
+                    android:background="@drawable/customdialogue_cellboundry"
+                    android:padding="2.0dip"
+                    android:text="@string/bmiCalculator_status_overweight"
+                    android:textAlignment="center"
+                    android:textColor="#7FAED1"
+                    android:textSize="@dimen/textSize_view_bmiInfoTableText" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:width="150.0dip"
+                    android:background="@drawable/customdialogue_cellboundry"
+                    android:padding="2.0dip"
+                    android:text="@string/bmiInfoDialogue_moderatelyobeseValue"
+                    android:textAlignment="center"
+                    android:textColor="#7FAED1"
+                    android:textSize="@dimen/textSize_view_bmiInfoTableText" />
+
+                <TextView
+                    android:background="@drawable/customdialogue_cellboundry"
+                    android:padding="2.0dip"
+                    android:text="@string/bmiCalculator_status_moderately_obese"
+                    android:textAlignment="center"
+                    android:textColor="#7FAED1"
+                    android:textSize="@dimen/textSize_view_bmiInfoTableText" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:width="150.0dip"
+                    android:background="@drawable/customdialogue_cellboundry"
+                    android:padding="2.0dip"
+                    android:text="@string/bmiInfoDialogue_severelyobeseValue"
+                    android:textAlignment="center"
+                    android:textColor="#7FAED1"
+                    android:textSize="@dimen/textSize_view_bmiInfoTableText" />
+
+                <TextView
+                    android:background="@drawable/customdialogue_cellboundry"
+                    android:padding="2.0dip"
+                    android:text="@string/bmiCalculator_status_severely_obese"
+                    android:textAlignment="center"
+                    android:textColor="#7FAED1"
+                    android:textSize="@dimen/textSize_view_bmiInfoTableText" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:width="150.0dip"
+                    android:background="@drawable/customdialogue_cellboundry"
+                    android:padding="2.0dip"
+                    android:text="@string/bmiInfoDialogue_veryseverelyobeseValue"
+                    android:textAlignment="center"
+                    android:textColor="#7FAED1"
+                    android:textSize="@dimen/textSize_view_bmiInfoTableText" />
+
+                <TextView
+                    android:background="@drawable/customdialogue_cellboundry"
+                    android:padding="2.0dip"
+                    android:text="@string/bmiCalculator_status_very_severely_obese"
+                    android:textAlignment="center"
+                    android:textColor="#7FAED1"
+                    android:textSize="@dimen/textSize_view_bmiInfoTableText" />
+            </TableRow>
+
+
+        </TableLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button_bmiInfoDialogue_gotIt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginEnd="8.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:background="@android:color/transparent"
+        android:text="@string/text_got_it"
+        android:textColor="#A2BACF"
+        android:textSize="@dimen/textSize_all_customDialogueHeader"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout5" />
+</androidx.constraintlayout.widget.ConstraintLayout>

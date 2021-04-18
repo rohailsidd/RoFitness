@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#376287">
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginTop="30.0dip"
+        android:layout_marginEnd="8.0dip"
+        android:text="@string/text_setup_profile"
+        android:textColor="#B6C3CA"
+        android:textSize="24.0sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginTop="22.0dip"
+        android:layout_marginEnd="8.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView18">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imageView_setupProfile_profilePhoto"
+            android:layout_width="94.0dip"
+            android:layout_height="94.0dip"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginEnd="8.0dip"
+            android:layout_marginBottom="8.0dip"
+            android:src="@drawable/all_camera_icon"
+            app:actualImageScaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@id/ring"
+            app:layout_constraintEnd_toEndOf="@id/ring"
+            app:layout_constraintStart_toStartOf="@id/ring"
+            app:layout_constraintTop_toTopOf="@id/ring"
+            app:roundAsCircle="true" />
+
+        <ImageView
+            android:id="@+id/ring"
+            android:layout_width="110.0dip"
+            android:layout_height="110.0dip"
+            android:background="@drawable/all_profile_ring"
+            android:contentDescription="@string/content_description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/editText_setupProfile_name"
+        android:layout_width="190.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22.0dip"
+        android:layout_marginTop="23.0dip"
+        android:layout_marginEnd="35.0dip"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/hint_name"
+        android:inputType="textPersonName"
+        android:textCursorDrawable="@color/colorTheme"
+        android:textColor="#7FAED1"
+
+        android:textSize="14.0sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/textView18"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35.0dip"
+        android:layout_marginEnd="30.0dip"
+        android:text="@string/text_name"
+        android:textColor="#B6C3CA"
+        android:textSize="16.0sp"
+        app:layout_constraintBottom_toBottomOf="@id/editText_setupProfile_name"
+        app:layout_constraintEnd_toStartOf="@id/editText_setupProfile_name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editText_setupProfile_name" />
+
+    <EditText
+        android:id="@+id/editText_setupProfile_age"
+        android:layout_width="190.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4.0dip"
+        android:layout_marginEnd="35.0dip"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/hint_age"
+        android:inputType="number"
+        android:textCursorDrawable="@color/colorTheme"
+        android:textColor="#7FAED1"
+        android:textSize="14.0sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/editText_setupProfile_name"
+        app:layout_constraintTop_toBottomOf="@id/editText_setupProfile_name" />
+
+    <EditText
+        android:id="@+id/heightTextFieldInCM"
+        android:layout_width="105.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4.0dip"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/hint_text_zero"
+        android:inputType="number"
+        android:textCursorDrawable="@color/colorTheme"
+        android:textColor="#7FAED1"
+        android:textSize="14.0sp"
+        app:layout_constraintStart_toStartOf="@id/editText_setupProfile_age"
+        app:layout_constraintTop_toBottomOf="@id/editText_setupProfile_age" />
+
+    <EditText
+        android:id="@+id/editText_setupProfile_height1"
+        android:layout_width="50.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4.0dip"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/hint_text_zero"
+        android:inputType="number"
+        android:textCursorDrawable="@color/colorTheme"
+        android:textColor="#7FAED1"
+        android:textSize="14.0sp"
+        app:layout_constraintStart_toStartOf="@id/editText_setupProfile_age"
+        app:layout_constraintTop_toBottomOf="@id/editText_setupProfile_age" />
+
+    <EditText
+        android:id="@+id/editText_setupProfile_height2"
+        android:layout_width="50.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5.0dip"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/hint_text_zero"
+        android:inputType="number"
+        android:textCursorDrawable="@color/colorTheme"
+        android:textColor="#7FAED1"
+        android:textSize="14.0sp"
+        app:layout_constraintBottom_toBottomOf="@id/editText_setupProfile_height1"
+        app:layout_constraintStart_toEndOf="@id/editText_setupProfile_height1"
+        app:layout_constraintTop_toTopOf="@id/editText_setupProfile_height1" />
+
+    <EditText
+        android:id="@+id/editText_setupProfile_weight"
+        android:layout_width="105.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4.0dip"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/hint_text_zero"
+        android:inputType="number"
+        android:textCursorDrawable="@color/colorTheme"
+        android:textColor="#7FAED1"
+        android:textSize="14.0sp"
+        app:layout_constraintStart_toStartOf="@id/heightTextFieldInCM"
+        app:layout_constraintTop_toBottomOf="@id/heightTextFieldInCM" />
+
+    <EditText
+        android:id="@+id/editText_setupProfile_waist"
+        android:layout_width="105.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4.0dip"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/hint_text_zero"
+        android:inputType="number"
+        android:textCursorDrawable="@color/colorTheme"
+        android:textColor="#7FAED1"
+        android:textSize="14.0sp"
+        app:layout_constraintStart_toStartOf="@id/editText_setupProfile_weight"
+        app:layout_constraintTop_toBottomOf="@id/editText_setupProfile_weight" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_age"
+        android:textColor="#B6C3CA"
+        android:textSize="16.0sp"
+        app:layout_constraintBottom_toBottomOf="@id/editText_setupProfile_age"
+        app:layout_constraintStart_toStartOf="@id/textView19"
+        app:layout_constraintTop_toTopOf="@id/editText_setupProfile_age" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/height_text"
+        android:textColor="#B6C3CA"
+        android:textSize="16.0sp"
+        app:layout_constraintBottom_toBottomOf="@id/heightTextFieldInCM"
+        app:layout_constraintStart_toStartOf="@id/textView20"
+        app:layout_constraintTop_toTopOf="@id/heightTextFieldInCM" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weight_text"
+        android:textColor="#B6C3CA"
+        android:textSize="16.0sp"
+        app:layout_constraintBottom_toBottomOf="@id/editText_setupProfile_weight"
+        app:layout_constraintStart_toStartOf="@id/textView22"
+        app:layout_constraintTop_toTopOf="@id/editText_setupProfile_weight" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/waist_text"
+        android:textColor="#B6C3CA"
+        android:textSize="16.0sp"
+        app:layout_constraintBottom_toBottomOf="@id/editText_setupProfile_waist"
+        app:layout_constraintStart_toStartOf="@id/textView23"
+        app:layout_constraintTop_toTopOf="@id/editText_setupProfile_waist" />
+
+    <Button
+        android:id="@+id/button_setupProfile_save"
+        android:layout_width="165.0dip"
+        android:layout_height="47.0dip"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginTop="28.0dip"
+        android:layout_marginEnd="8.0dip"
+        android:layout_marginBottom="32.0dip"
+        android:background="@drawable/button_style"
+        android:text="@string/btn_save_text"
+        android:textColor="#98C2E1"
+        android:textSize="16.0sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_setupProfile_waist" />
+
+    <Spinner
+        android:id="@+id/spinner_setupProfile_height"
+        android:layout_width="75.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9.0dip"
+        android:background="@drawable/bmi_calculator_spinner_background"
+        android:entries="@array/height_unit"
+        android:paddingStart="0.0dip"
+        android:paddingEnd="7.0dip"
+        android:popupBackground="#B6C3CA"
+        android:textColor="#7FAED1"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@id/heightTextFieldInCM"
+        app:layout_constraintStart_toEndOf="@id/heightTextFieldInCM"
+        app:layout_constraintTop_toTopOf="@id/heightTextFieldInCM" />
+
+    <Spinner
+        android:id="@+id/spinner_setupProfile_weight"
+        android:layout_width="75.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9.0dip"
+        android:background="@drawable/bmi_calculator_spinner_background"
+        android:entries="@array/weight_unit"
+        android:paddingStart="0.0dip"
+        android:paddingEnd="7.0dip"
+        android:popupBackground="#B6C3CA"
+        android:textColor="#7FAED1"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@id/editText_setupProfile_weight"
+        app:layout_constraintStart_toEndOf="@id/editText_setupProfile_weight"
+        app:layout_constraintTop_toTopOf="@id/editText_setupProfile_weight" />
+
+    <Spinner
+        android:id="@+id/waistSpinner"
+        android:layout_width="75.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9.0dip"
+        android:background="@drawable/bmi_calculator_spinner_background"
+        android:entries="@array/waist_unit"
+        android:paddingStart="0.0dip"
+        android:paddingEnd="7.0dip"
+        android:popupBackground="#B6C3CA"
+        android:textColor="#7FAED1"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@id/editText_setupProfile_waist"
+        app:layout_constraintStart_toEndOf="@id/editText_setupProfile_waist"
+        app:layout_constraintTop_toTopOf="@id/editText_setupProfile_waist" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="11.0dip"
+        android:layout_height="11.0dip"
+        android:layout_marginEnd="2.0dip"
+        android:contentDescription="@string/content_description"
+        app:layout_constraintBottom_toBottomOf="@id/spinner_setupProfile_height"
+        app:layout_constraintEnd_toEndOf="@id/spinner_setupProfile_height"
+        app:layout_constraintTop_toTopOf="@id/spinner_setupProfile_height"
+        app:srcCompat="@drawable/all_spinner_updown_arrow_icon" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="11.0dip"
+        android:layout_height="11.0dip"
+        android:layout_marginEnd="2.0dip"
+        android:contentDescription="@string/content_description"
+        app:layout_constraintBottom_toBottomOf="@id/spinner_setupProfile_weight"
+        app:layout_constraintEnd_toEndOf="@id/spinner_setupProfile_weight"
+        app:layout_constraintTop_toTopOf="@id/spinner_setupProfile_weight"
+        app:srcCompat="@drawable/all_spinner_updown_arrow_icon" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="11.0dip"
+        android:layout_height="11.0dip"
+        android:layout_marginEnd="2.0dip"
+        android:contentDescription="@string/content_description"
+        app:layout_constraintBottom_toBottomOf="@id/waistSpinner"
+        app:layout_constraintEnd_toEndOf="@id/waistSpinner"
+        app:layout_constraintTop_toTopOf="@id/waistSpinner"
+        app:srcCompat="@drawable/all_spinner_updown_arrow_icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

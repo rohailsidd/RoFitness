@@ -1,0 +1,85 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.rofitness.fitnessapp"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.room:room-runtime:2.2.6'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation files('libs\\support-lib.jar')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    kapt 'androidx.room:room-compiler:2.2.6'
+    implementation 'com.google.dagger:dagger:2.16'
+/*    kapt 'com.google.dagger:dagger-compiler:2.11'
+    kapt 'com.google.dagger:dagger-android-processor:2.11'*/
+    implementation 'com.google.dagger:dagger-android-support:2.16'
+    implementation group: 'com.squareup.picasso', name: 'picasso', version: '2.71828'
+    implementation group: 'com.google.firebase', name: 'firebase-analytics', version: '17.6.0'
+    implementation group: 'com.android.billingclient', name: 'billing', version: '3.0.2'
+    implementation group: 'org.greenrobot', name: 'eventbus', version: '3.2.0'
+    implementation 'com.github.Shashank02051997:FancyAlertDialog-Android:0.1'
+    implementation group: 'com.akexorcist', name: 'RoundCornerProgressBar', version: '2.0.3'
+    implementation group: 'com.facebook.fresco', name: 'drawee', version: '2.1.0'
+    implementation 'com.github.blennerSilva:AwesomeDialog:+'
+    implementation 'nl.dionsegijn:konfetti:1.2.5'
+    implementation group: 'com.getkeepsafe.taptargetview', name: 'taptargetview', version: '1.11.0'
+    implementation group: 'com.blankj', name: 'utilcode', version: '1.22.1'
+    // implementation group: 'com.theartofdev.edmodo', name: 'android-image-cropper', version: '2.7.0'
+    implementation 'com.github.chathuralakmal:AndroidImagePopup:1.2.2'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+    //  implementation group: 'com.squareup.moshi', name: 'moshi', version: '1.9.3'
+    //  implementation("com.squareup.moshi:moshi-kotlin:1.11.0")
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.6.0")
+    implementation("com.squareup.moshi:moshi:1.6.0")
+    implementation 'com.github.lzyzsd:circleprogress:1.2.1'
+    implementation group: 'com.kevalpatel2106', name: 'ruler-picker', version: '1.0'
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation group: 'com.facebook.fresco', name: 'fresco', version: '2.0.0'
+    implementation group: 'com.facebook.stetho', name: 'stetho', version: '1.5.1'
+    implementation "androidx.core:core-ktx:+"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.4.0"
+
+}
+repositories {
+    mavenCentral()
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    >
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="68dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="20.0dip"
+        android:layout_marginEnd="20.0dip"
+        android:padding="10.0dip"
+        android:text="@string/exit_app"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColor="#243D50"
+        android:layout_marginStart="20.0dip"
+        android:layout_marginEnd="20.0dip"
+        android:padding="5.0dip"
+        android:text="@string/are_you_sure_to_exit" />
+
+</LinearLayout>

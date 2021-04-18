@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/blue_custom</item>                   /// FF376287 most of the blue background color
+        <item name="android:windowTranslucentStatus">false</item>              ///
+        <item name="colorAccent">#9CC0DD</item>                                /// FF9C27B0 setup profile text underline and type highlight
+        <item name="colorPrimary">#4B7598</item>                               /// FF4B7598 unscrollable border colour
+        <item name="colorPrimaryDark">#CA3CE3</item>                           /// FFCA3CE3
+        <item name="customRcBackgroundColor">@color/cutom_rec_background</item>                    /// FFC5BDBD
+        <item name="customRcProgressColor">@color/colorWhite</item>
+        <item name="customRcRadius">@dimen/corner_radius_prograss_bar</item>
+        <item name="customRcSecondaryProgressColor">@color/colorWhite</item>
+        <item name="android:statusBarColor">@color/statusBarColor</item>                      ///
+        <item name="android:windowLightStatusBar">false</item>                  ///
+    </style>
+
+    <style name="Divider">
+        <item name="android:background">?android:attr/listDivider</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    <style name="SideTheme" parent="@android:style/Theme.DeviceDefault.Light.Dialog">
+        <item name="android:windowAnimationStyle">@style/SideTheme1</item> ///
+    </style>
+
+    <style name="SideTheme1">
+        <item name="android:windowEnterAnimation">@anim/side_in</item> ///
+        <item name="android:windowExitAnimation">@anim/side_out</item> //
+    </style>
+
+    <style name="SlideTheme" parent="@android:style/Theme.DeviceDefault.Light.Dialog">
+        <item name="android:windowAnimationStyle">@style/SlideTheme1</item> ///
+    </style>
+
+    <style name="SlideTheme1">
+        <item name="android:windowEnterAnimation">@anim/slide_in</item> ///
+        <item name="android:windowExitAnimation">@anim/slide_out</item> ///
+    </style>
+
+    <style name="cropTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="tabsFontStyle" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">#000000</item>                         /// FF000000   name="android:fontFamily">@font/airstrike
+
+    </style>
+
+    <color name="blue_custom">#376287</color>
+    <color name="cutom_rec_background">#C5BDBD</color>
+    <color name="statusBarColor">#3C698F</color>
+</resources>

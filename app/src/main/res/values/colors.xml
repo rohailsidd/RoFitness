@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        <color name="backColor">#f4f4f4</color>
+    -->
+    <color name="black">#000000</color>
+    <color name="bmi_height_scale_color">#4B7598</color>     /// height scale FF009486
+    <color name="bmi_weight_scale_color">#4B7598</color>     /// weight scale FFFC8600
+    <color name="colorAccent">#9C27B0</color>                /// FFC00000
+    <color name="colorBlack">#000000</color>                 /// some text writing FF000000
+    <color name="colorPrimary">#4B7598</color>               /// FFC00000 reset yes button and un scrollable border colour
+    <color name="colorPrimaryDark">#CA3CE3</color>           /// FF860001
+    <color name="colorRed">#4B7598</color>                   /// FFEE0000 bmi info text
+    <color name="colorTheme">#4B7598</color>                 /// FFBF0000 setup profile save button and workout top border
+    <color name="colorWhite">#376287</color>                 /// FFCAB6B6
+    <color name="darkRed">#C5BDBD</color>                    /// FF860001 workouts progress under color
+    <color name="fall">#44D8D27E</color>                     /// 44D8D27E
+    <color name="gradient_center">#5A0000</color>            /// FF5A0000
+    <color name="gradient_end">#060000</color>               /// FF060000
+    <color name="gradient_start">#B80000</color>             /// FFB80000
+    <color name="progressColor">#C5BDBD</color>              /// FF434343 upper progress bar
+    <color name="red">#C00000</color>                        /// FFC00000
+    <color name="spring">#448DA64B</color>                   /// 448DA64B
+    <color name="textofcard">#4B7598</color>                 /// FF873D37 setup profile measurement
+    <color name="tooltip_background_dark">#E6616161</color>  /// E6616161
+    <color name="tooltip_background_light">#873D37</color>   /// FF873D37
+    <color name="white">#376287</color>                      /// FF873D37 main page and exercise page background and background before splash screen
+    <color name="workoutBack">#873D37</color>                /// FF873D37
+    <color name="workoutCircle">#4B7598</color>              /// FF323232 complete workout button
+
+                                                             /// main background colour = FF376287
+</resources>
+

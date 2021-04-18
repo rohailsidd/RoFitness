@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/calcBmi"
+        android:icon="@drawable/drawer_calculate_bmi_icon"
+        android:background="#376287"
+
+        android:title="@string/text_calculate_bmi" />
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/drawer_settings_icon"
+        android:title="@string/text_settings" />
+
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/about_icon"
+        android:title="@string/text_about" />
+
+</menu>

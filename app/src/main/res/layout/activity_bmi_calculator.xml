@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activityID"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#376287"
+    android:orientation="vertical">
+<!--
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_status_bar"
+        android:background="@color/colorWhite" />-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_bmiCalculator_appBar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        app:navigationIcon="@drawable/all_backarrow_black">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/text_bmi_calculator"
+            android:textColor="#B6C3CA"
+            android:textSize="23.0sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/imageButton_bmiCalculator_about"
+            android:layout_width="32.0dip"
+            android:layout_height="31.0dip"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20.0dip"
+            android:background="@drawable/dialog_hand"
+            android:contentDescription="@string/content_description"
+            android:onClick="infoClick" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="16.0dip"
+        android:paddingBottom="8.0dip">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8.0dip">
+
+            <TextView
+                android:id="@+id/textView_scale_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8.0dip"
+                android:layout_marginTop="8.0dip"
+                android:text="@string/text_scale"
+                android:textColor="#B6C3CA"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView_bmiCalculator_scale"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8.0dip"
+                android:layout_marginTop="8.0dip"
+                android:layout_marginEnd="8.0dip"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitXY"
+                app:chainUseRtl="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_scale_title"
+                app:srcCompat="@drawable/complete_scale" />
+
+            <ImageView
+                android:id="@+id/imageView_bmiCalculator_pointer"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:contentDescription="@string/content_description"
+                app:layout_constraintBottom_toTopOf="@id/view_bmiCalculator_pointerPosition"
+                app:layout_constraintEnd_toEndOf="@id/view_bmiCalculator_pointerPosition"
+                app:layout_constraintStart_toStartOf="@id/view_bmiCalculator_pointerPosition"
+                app:srcCompat="@mipmap/indicator_icon" />
+
+            <View
+                android:id="@+id/view_bmiCalculator_pointerPosition"
+                android:layout_width="1.0dip"
+                android:layout_height="1.0dip"
+                app:layout_constraintBottom_toBottomOf="@id/imageView_bmiCalculator_scale"
+                app:layout_constraintEnd_toEndOf="@id/imageView_bmiCalculator_scale"
+                app:layout_constraintHorizontal_bias="-0.4"
+                app:layout_constraintStart_toStartOf="@id/imageView_bmiCalculator_scale"
+                app:layout_constraintTop_toTopOf="@id/imageView_bmiCalculator_scale"
+                app:layout_constraintVertical_bias="0.84000003" />
+
+            <TextView
+                android:id="@+id/textView_bmiCalculator_yourBmiIs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8.0dip"
+                android:layout_marginTop="8.0dip"
+                android:text="@string/text_your_bmi_is"
+                android:textColor="#B7D1E6"
+                app:layout_constraintEnd_toStartOf="@id/textView_bmiCalculator_bmi"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView_bmiCalculator_scale" />
+
+            <TextView
+                android:id="@+id/textView_bmiCalculator_bmi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8.0dip"
+                android:text="00"
+                android:textColor="#B7D1E6"
+                app:layout_constraintBottom_toBottomOf="@id/textView_bmiCalculator_yourBmiIs"
+                app:layout_constraintEnd_toStartOf="@id/textView_bmiCalculator_bmi_status"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/textView_bmiCalculator_yourBmiIs"
+                app:layout_constraintTop_toTopOf="@id/textView_bmiCalculator_yourBmiIs" />
+
+            <TextView
+                android:id="@+id/textView_bmiCalculator_bmi_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2.0dip"
+                android:layout_marginEnd="8.0dip"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/text_n_a"
+                android:textColor="#B7D1E6"
+                app:layout_constraintBottom_toBottomOf="@id/textView_bmiCalculator_bmi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/textView_bmiCalculator_bmi"
+                app:layout_constraintTop_toTopOf="@id/textView_bmiCalculator_bmi" />
+
+            <include
+                android:id="@+id/include_bmiCalculator_heightScale"
+                layout="@layout/layout_scale"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_bmiCalculator_yourBmiIs" />
+
+            <include
+                android:id="@+id/include_bmiCalculator_weightScale"
+                layout="@layout/layout_scale"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/include_bmiCalculator_heightScale" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

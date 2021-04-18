@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="250.0dip"
+    android:layout_height="385.0dip"
+    android:layout_marginStart="29.0dip"
+    android:layout_marginTop="8.0dip"
+    android:layout_marginEnd="10.0dip"
+    android:background="#376287">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#376287"
+        app:cardBackgroundColor="#376287">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#376287">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/imageViewItemWorkoutBackground"
+                android:layout_width="fill_parent"
+                android:layout_height="337.0dip"
+                android:contentDescription="@string/content_description"
+                app:actualImageScaleType="fitXY"
+                app:fadeDuration="500"
+                app:placeholderImageScaleType="none"
+                app:roundedCornerRadius="8.0dip" />
+
+            <TextView
+                android:id="@+id/textView_itemWorkout_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/text_workouts"
+                android:layout_marginStart="35.0dip"
+                android:layout_marginBottom="3.0dip"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#B6C3CA"
+                android:textSize="21.5sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_workouts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/textView_itemWorkout_level"
+                android:layout_marginStart="35.0dip"
+                android:layout_marginBottom="3.0dip"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/text_workouts"
+                android:textColor="#B6C3CA"
+                android:textSize="21.5sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_itemWorkout_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/rounCornerProgressBar_workout_progress"
+                android:layout_marginStart="35.0dip"
+                android:layout_marginTop="1.0dip"
+                android:layout_marginBottom="15.0dip"
+                android:fontFamily="@font/roboto"
+                android:textColor="#B6C3CA"
+                android:textSize="12.0sp" />
+
+            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                android:id="@+id/rounCornerProgressBar_workout_progress"
+                android:layout_width="100.0dip"
+                android:layout_height="9.0dip"
+                android:layout_above="@id/imageView_workout_shadow"
+                android:layout_marginStart="35.0dip"
+                android:layout_marginBottom="11.0dip"
+                android:visibility="gone"
+                app:rcBackgroundColor="?customRcBackgroundColor"
+                app:rcBackgroundPadding="0.0dip"
+                app:rcMax="100.0"
+                app:rcProgress="30.0"
+                app:rcProgressColor="?customRcProgressColor"
+                app:rcRadius="?customRcRadius"
+                app:rcReverse="false"
+                app:rcSecondaryProgress="0.0"
+                app:rcSecondaryProgressColor="?customRcSecondaryProgressColor" />
+
+            <TextView
+                android:id="@+id/textView_workout_progressPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/imageView_workout_shadow"
+                android:layout_marginStart="10.0dip"
+                android:layout_marginBottom="8.0dip"
+                android:layout_toEndOf="@id/rounCornerProgressBar_workout_progress"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#B6C3CA"
+                android:textSize="11.0sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageView_workout_proceed"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:layout_below="@id/text_workouts"
+                android:layout_marginStart="8.0dip"
+                android:layout_toEndOf="@id/textView_itemWorkout_level"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/start_workout_start_icon" />
+
+            <ImageView
+                android:id="@+id/imageView_workout_shadow"
+                android:layout_width="fill_parent"
+                android:layout_height="45.0dip"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:contentDescription="@string/content_description"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="250.0dip"
+    android:background="#5782A5">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginEnd="8.0dip"
+        app:layout_constraintBottom_toTopOf="@id/constraintLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imageView_drawerHeader_profileImage"
+            android:layout_width="84.0dip"
+            android:layout_height="84.0dip"
+            android:layout_alignParentStart="true"
+            app:actualImageResource="@drawable/all_camera_icon"
+            app:actualImageScaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@id/ring"
+            app:layout_constraintEnd_toEndOf="@id/ring"
+            app:layout_constraintStart_toStartOf="@id/ring"
+            app:layout_constraintTop_toTopOf="@id/ring"
+            app:roundAsCircle="true" />
+
+        <ImageView
+            android:id="@+id/ring"
+            android:layout_width="107.0dip"
+            android:layout_height="107.0dip"
+            android:layout_marginTop="16.0dip"
+            android:background="@drawable/all_profile_ring"
+            android:contentDescription="@string/content_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_darwerHeader_editProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dip"
+            android:text="@string/text_profile"
+            android:textColor="#B6C3CA"
+            android:textSize="13.5sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/textView_drawerHeader_userName"
+            app:layout_constraintStart_toStartOf="@id/textView_drawerHeader_userName"
+            app:layout_constraintTop_toBottomOf="@id/ring" />
+
+        <ImageButton
+            android:id="@+id/imageButton_drawerHeader_editProfile"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:background="@drawable/drawer_edit_profile_icon"
+            android:contentDescription="@string/content_description"
+            app:layout_constraintBottom_toBottomOf="@id/textView_darwerHeader_editProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/textView_darwerHeader_editProfile"
+            app:layout_constraintTop_toTopOf="@id/textView_darwerHeader_editProfile"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView_drawerHeader_userName"
+            android:layout_width="105.7dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_darwerHeader_editProfile"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginBottom="8.0dip"
+            android:hint="@string/hint_text_name"
+            android:textAlignment="center"
+            android:textColor="#B6C3CA"
+            android:textSize="16.7sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/ring"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView_darwerHeader_editProfile" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="#B6C3CA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="1.0dip"
+            android:layout_height="fill_parent"
+            android:layout_margin="8.0dip"
+            android:layout_marginStart="16.0dip"
+            android:background="#376287"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textView10"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginBottom="8.0dip"
+            android:text="@string/text_bmi"
+            android:textColor="#376287"
+            android:textSize="13.0sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/view_drawerHeader_divider"
+            app:layout_constraintHorizontal_bias="0.18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_drawerHeader_bmiValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginBottom="8.0dip"
+            android:textColor="#376287"
+            android:textSize="13.0sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_divider"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_drawerHeader_divider"
+            android:layout_width="0.70000005dip"
+            android:layout_height="0.0dip"
+            android:layout_marginStart="8.0dip"
+            android:layout_marginTop="4.0dip"
+            android:layout_marginEnd="8.0dip"
+            android:layout_marginBottom="4.0dip"
+            android:background="#376287"
+            android:padding="2.0dip"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.217"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.486" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8.0dip"
+            android:layout_marginEnd="8.0dip"
+            android:text="@string/text_progress"
+            android:textColor="#376287"
+            android:textSize="13.0sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/textView_drawerHeader_progressTextValue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_drawerHeader_divider"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/textView_drawerHeader_progressTextValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#376287"
+            android:textSize="13.0sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/textView21"
+            app:layout_constraintStart_toStartOf="@id/textView21"
+            app:layout_constraintTop_toBottomOf="@id/textView21" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

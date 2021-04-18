@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayout_tergetMuscle_headerContainer"
+    android:layout_width="fill_parent"
+    android:layout_height="150.0dip">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/imageView_workoutHeader_headerBackground"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="@string/content_description"
+        app:actualImageScaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_workoutHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/height_status_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/all_backarrow_white">
+
+        <TextView
+            android:id="@+id/textView_workoutHeader_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25.0dip"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/abs_workout_heading"
+            android:textAllCaps="true"
+            android:textColor="#B6C3CA"
+            android:textSize="21.0sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView_workoutHeader_backButton"
+            app:layout_constraintStart_toEndOf="@+id/imageView_workoutHeader_backButton"
+            app:layout_constraintTop_toTopOf="@+id/imageView_workoutHeader_backButton" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imageView_workoutHeader_reset"
+        android:layout_width="@dimen/size_refresh_icon"
+        android:layout_height="@dimen/size_refresh_icon"
+        android:layout_marginEnd="8.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:contentDescription="@string/content_description"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/imageView_workoutHeader_headerBackground"
+        app:srcCompat="@drawable/all_reset_icon" />
+
+    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+        android:id="@+id/roundCornerProgressBar_workoutHeader_workoutOverAllProgress"
+        android:layout_width="110.0dip"
+        android:layout_height="9.0dip"
+        android:layout_marginStart="80.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/imageView_workoutHeader_reset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rcBackgroundColor="@color/progressColor"
+        app:rcBackgroundPadding="0.0dip"
+        app:rcMax="100.0"
+        app:rcProgress="35.0"
+        app:rcProgressColor="?customRcProgressColor"
+        app:rcRadius="?customRcRadius"
+        app:rcReverse="false"
+        app:rcSecondaryProgress="0.0"
+        app:rcSecondaryProgressColor="?customRcSecondaryProgressColor" />
+
+    <TextView
+        android:id="@+id/textView_workoutHeader_percentProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4.0dip"
+        android:fontFamily="@font/roboto_medium"
+        android:paddingStart="0.0dip"
+        android:paddingEnd="2.0dip"
+        android:textColor="#B6C3CA"
+        android:textSize="12.0sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@id/roundCornerProgressBar_workoutHeader_workoutOverAllProgress"
+        app:layout_constraintEnd_toEndOf="@id/roundCornerProgressBar_workoutHeader_workoutOverAllProgress" />
+</androidx.constraintlayout.widget.ConstraintLayout>

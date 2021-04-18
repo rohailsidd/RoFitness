@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="daysList"> ///
+        <item>Sun</item>
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+    </array>
+    <array name="height_unit">
+        <item>ft+in</item>
+        <item>cm</item>
+    </array>
+    <array name="preloaded_fonts"> ///
+        <item>@font/roboto</item>
+        <item>@font/roboto_medium</item>
+    </array>
+    <array name="waist_unit">
+        <item>in</item>
+        <item>cm</item>
+    </array>
+    <array name="weight_unit">
+        <item>kg</item>
+        <item>lbs</item>
+    </array>
+</resources>

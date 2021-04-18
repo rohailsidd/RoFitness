@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/textView_scale_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginTop="8.0dip"
+        android:text="@string/text_height"
+        android:textColor="#B6C3CA"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_scale_primaryValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:text="00 cm"
+        android:textColor="#B6C3CA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_scale_title" />
+
+    <com.kevalpatel2106.rulerpicker.RulerValuePicker
+        android:id="@+id/rulerPicker_scale"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/height_ruler_value_picker"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:background="@color/red"
+        app:indicator_color="#376287"
+        app:indicator_interval="@dimen/margin_ruler_value_picker_indicator_intervel"
+        app:indicator_width="@dimen/width_ruler_value_picker_indicator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_scale_primaryValue"
+        app:max_value="245"
+        app:min_value="122"
+        app:notch_color="#376287"
+        app:ruler_text_size="@dimen/textsize_ruler_value_picker" />
+
+    <TextView
+        android:id="@+id/textView_scale_secondaryValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8.0dip"
+        android:text="0'0&quot;"
+        android:textColor="#B6C3CA"
+        app:layout_constraintBottom_toBottomOf="@id/textView_scale_primaryValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView_scale_primaryValue" />
+</androidx.constraintlayout.widget.ConstraintLayout>

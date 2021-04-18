@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="corner_radius_prograss_bar">10dp</dimen>
+
+    <dimen name="height_back_button">26dp</dimen> ///
+    <dimen name="height_home_icons">30dp</dimen>
+    <dimen name="height_ruler_value_picker">80dp</dimen>
+    <dimen name="height_status_bar">25dp</dimen>
+    <dimen name="margin_home_icons">8dp</dimen>
+    <dimen name="margin_ruler_value_picker_indicator_intervel">8dp</dimen>
+    <dimen name="margin_start_back_button">16dp</dimen> ///
+    <dimen name="margin_top_back_button">24dp</dimen> ///
+
+    <dimen name="size_refresh_icon">32dp</dimen>
+    <dimen name="textSize_all_customDialogueDescription">16sp</dimen>
+    <dimen name="textSize_all_customDialogueHeader">25sp</dimen>
+    <dimen name="textSize_view_bmiInfoTableText">18sp</dimen>
+    <dimen name="textsize_all_calculationResult">20sp</dimen> ///
+    <dimen name="textsize_all_inputFields">18sp</dimen> ///
+    <dimen name="textsize_all_inputHeadings">18sp</dimen> ///
+    <dimen name="textsize_all_radioGroupItem">14sp</dimen> ///
+    <dimen name="textsize_all_textview">22sp</dimen> ///
+    <dimen name="textsize_all_title">25sp</dimen> ///
+    <dimen name="textsize_ruler_value_picker">4sp</dimen>
+    <dimen name="textsize_settings_settingstext">18sp</dimen> ///
+    <dimen name="textsize_setupprofile_description">14sp</dimen> ///
+
+    <dimen name="width_back_button">28dp</dimen> ///
+    <dimen name="width_home_icons">40dp</dimen>
+    <dimen name="width_ruler_value_picker_indicator">2dp</dimen>
+</resources>

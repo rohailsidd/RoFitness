@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/viewPhoto"
+        android:title="@string/text_view_photo" />
+    <item
+        android:id="@+id/uploadPhoto"
+        android:title="@string/text_upload_photo" />
+    <item
+        android:id="@+id/removePhoto"
+        android:title="@string/text_remove_photo" />
+</menu>
